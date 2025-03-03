@@ -4,8 +4,6 @@
 
 ![poster3](https://raw.githubusercontent.com/BabyStory-App/.github/refs/heads/main/assets/poster/poster.pdf3.jpg)
 
-![poster5](https://raw.githubusercontent.com/BabyStory-App/.github/refs/heads/main/assets/poster/poster.pdf5.jpg)
-
 울음을 감지하기 위한 YamNet 모델을 활용하는 코드와 울음 원인을 분석하기 위하여 데이터를 전처리하고 ResNet50을 Fine-tuning하여 분류를 수행하는 코드가 포함되어 있습니다.
 
 전체 화면 스크린샷은 [BabyStory App Screenshots](https://github.com/BabyStory-App/.github/tree/main/assets/Screenshots)에서, 시연 영상은 [BabyStory App Demo](https://github.com/BabyStory-App/.github/tree/main/assets/Screen%20recordings)에서 확인 가능합니다.
@@ -17,6 +15,8 @@
 음성 데이터를 전처리하는 과정은 [음성 데이터 전처리.ipynb](https://github.com/BabyStory-App/BabyStory-AI/blob/main/%E1%84%8B%E1%85%B3%E1%86%B7%E1%84%89%E1%85%A5%E1%86%BC%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5.ipynb)에서 확인 가능합니다.
 
 ### 울음 감지 및 분석
+
+> 파인 튜닝된 resnet50.h5 파일은 비공개로 관리되고 있습니다. 관련하여 문의사항이 있으시면 importjaewone@gmail.com으로 연락주시기 바랍니다.
 
 - 울음 감지: On-device에서 울음을 감지하기 위해 TensorFlow Lite를 사용하였으며, MobileNet 아키텍처 기반의 YamNet 모델(521가지 소리 분류)을 활용합니다.
 - 울음 분석: 음성 파일로부터 추출한 MFCC 데이터를 기반으로, Fine-tuning된 ResNet50 모델을 통해 7가지 울음 원인을 분류합니다.
